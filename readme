@@ -18,7 +18,7 @@ return new class extends Migration
             ->whereNotNull('vendor_id')
             ->update(['supplier_id' => DB::raw('vendor_id')]);
     }
-
+ public function down(): void
     public function down(): void
     {
         Schema::table('purchase_orders', function (Blueprint $table) {
